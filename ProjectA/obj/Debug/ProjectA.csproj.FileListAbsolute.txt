@@ -1,0 +1,12 @@
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\bin\Debug\ProjectA.exe.config
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\bin\Debug\ProjectA.exe
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\bin\Debug\ProjectA.pdb
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.AddStudent.resources
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.Login.resources
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.Properties.Resources.resources
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.csproj.GenerateResource.cache
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.csproj.CoreCompileInputs.cache
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.exe
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.pdb
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.csprojAssemblyReference.cache
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.AddAdvisor.resources
