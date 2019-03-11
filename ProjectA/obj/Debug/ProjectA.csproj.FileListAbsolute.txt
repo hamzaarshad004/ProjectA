@@ -10,3 +10,6 @@ E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\P
 E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.pdb
 E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.csprojAssemblyReference.cache
 E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.AddAdvisor.resources
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.AddProject.resources
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.MakeGroups.resources
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.CreateGroup.resources

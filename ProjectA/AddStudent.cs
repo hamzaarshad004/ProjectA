@@ -31,7 +31,15 @@ namespace ProjectA
             con.Open();
             if (con.State == ConnectionState.Open)
             {
-                string Insert = "INSERT INTO Person(FirstName, LastName, Contact, Email, DateOfBirth, Gender) VALUES('" + Convert.ToString(txtFirstName.Text) + "', '" + Convert.ToString(txtLastName.Text) + "','" + Convert.ToString(txtContact.Text) + "', '" + Convert.ToString(txtEmail.Text) + "','" +Convert.ToDateTime(dtDOB.Value) + "', '" + 1 + "')";
+                string Insert;
+                if (cmbGender.SelectedIndex == 0)
+                {
+                    Insert = "INSERT INTO Person(FirstName, LastName, Contact, Email, DateOfBirth, Gender) VALUES('" + Convert.ToString(txtFirstName.Text) + "', '" + Convert.ToString(txtLastName.Text) + "','" + Convert.ToString(txtContact.Text) + "', '" + Convert.ToString(txtEmail.Text) + "','" + Convert.ToDateTime(dtDOB.Value) + "', '" + 1 + "')";
+                }
+                else
+                {
+                    Insert = "INSERT INTO Person(FirstName, LastName, Contact, Email, DateOfBirth, Gender) VALUES('" + Convert.ToString(txtFirstName.Text) + "', '" + Convert.ToString(txtLastName.Text) + "','" + Convert.ToString(txtContact.Text) + "', '" + Convert.ToString(txtEmail.Text) + "','" + Convert.ToDateTime(dtDOB.Value) + "', '" + 2 + "')";
+                }             
                 int ID;
                 SqlCommand cmd = new SqlCommand(Insert,con);
                 cmd.ExecuteNonQuery();
