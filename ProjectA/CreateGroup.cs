@@ -25,7 +25,7 @@ namespace ProjectA
             con.Open();
             if (con.State == ConnectionState.Open)
             {
-                string Insert = "INSERT INTO Group(Created_On) VALUES ('" + mcCreationDate + "')";
+                string Insert = "INSERT INTO [dbo].[Group](Created_On) VALUES ('" +Convert.ToDateTime(mcCreationDate.Value) + "')";
                 SqlCommand cmd = new SqlCommand(Insert,con);
                 cmd.ExecuteNonQuery();
             }
@@ -35,7 +35,7 @@ namespace ProjectA
         private void lblAssignStudents_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            MakeGroups MG = new MakeGroups();
+            Show_Groups MG = new Show_Groups();
             MG.Show();
         }
     }

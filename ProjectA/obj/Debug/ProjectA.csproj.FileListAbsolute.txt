@@ -13,3 +13,4 @@ E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\P
 E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.AddProject.resources
 E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.MakeGroups.resources
 E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.CreateGroup.resources
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.Show_Groups.resources

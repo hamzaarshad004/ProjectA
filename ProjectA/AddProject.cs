@@ -13,7 +13,7 @@ namespace ProjectA
 {
     public partial class AddProject : Form
     {
-        public string conStr = "Data Source=DESKTOP-P69CV50;Initial Catalog=ProjectA;Integrated Security=True";
+        public static string conStr = "Data Source=DESKTOP-P69CV50;Initial Catalog=ProjectA;Integrated Security=True";
 
         public AddProject()
         {
