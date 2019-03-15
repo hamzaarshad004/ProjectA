@@ -33,7 +33,20 @@ namespace ProjectA
         {
             if (e.ColumnIndex == 0)
             {
-                
+                int id = Groups.groups1[e.RowIndex].GroupID;
+                if (Groups.checkNumberOfStudents(id) < 4)
+                {
+                    MakeGroups MG = new MakeGroups();
+                    MG.Show();
+                }
+                else
+                {
+                    MessageBox.Show("4 Students already added");
+                }
+            }
+            else if (e.ColumnIndex == 1)
+            {
+
             }
         }
     }

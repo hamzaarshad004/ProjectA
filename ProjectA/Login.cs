@@ -21,7 +21,7 @@ namespace ProjectA
         {
             this.Hide();
             AddStudent AS = new AddStudent();
-            //AS.Show();
+            AS.Show();
             AddAdvisor AD = new AddAdvisor();
             //AD.Show();
             AddProject AP = new AddProject();

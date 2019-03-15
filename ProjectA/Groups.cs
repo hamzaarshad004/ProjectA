@@ -39,5 +39,20 @@ namespace ProjectA
                 }
             }
         }
+
+        public static int checkNumberOfStudents(int id)
+        {
+            SqlConnection connection = new SqlConnection(AddProject.conStr);
+            connection.Open();
+            int check = 0;
+            if (connection.State == ConnectionState.Open)
+            {
+                string query = "SELECT COUNT(StudentId) FROM GroupStudent WHERE GroupId = '"+id+"'";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                check = (int)cmd.ExecuteScalar();
+
+            }
+            return check;
+        }
     }
 }

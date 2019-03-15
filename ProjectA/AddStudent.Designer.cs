@@ -43,6 +43,7 @@
             this.lblDOB = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
             this.btnAddStudent = new System.Windows.Forms.Button();
+            this.lblViewAdded = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // txtFirstName
@@ -179,11 +180,24 @@
             this.btnAddStudent.UseVisualStyleBackColor = true;
             this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
+            // lblViewAdded
+            // 
+            this.lblViewAdded.AutoSize = true;
+            this.lblViewAdded.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblViewAdded.Location = new System.Drawing.Point(867, 682);
+            this.lblViewAdded.Name = "lblViewAdded";
+            this.lblViewAdded.Size = new System.Drawing.Size(192, 24);
+            this.lblViewAdded.TabIndex = 15;
+            this.lblViewAdded.TabStop = true;
+            this.lblViewAdded.Text = "View Added Students";
+            this.lblViewAdded.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblViewAdded_LinkClicked);
+            // 
             // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 725);
+            this.Controls.Add(this.lblViewAdded);
             this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.lblGender);
             this.Controls.Add(this.lblDOB);
@@ -224,5 +238,6 @@
         private System.Windows.Forms.Label lblDOB;
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Button btnAddStudent;
+        private System.Windows.Forms.LinkLabel lblViewAdded;
     }
 }

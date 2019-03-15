@@ -52,12 +52,14 @@
             this.AssignStudent.HeaderText = "Assign Students";
             this.AssignStudent.Name = "AssignStudent";
             this.AssignStudent.Text = "Assign";
+            this.AssignStudent.UseColumnTextForButtonValue = true;
             // 
             // SeeStudents
             // 
             this.SeeStudents.HeaderText = "View Assigned Students";
             this.SeeStudents.Name = "SeeStudents";
             this.SeeStudents.Text = "View";
+            this.SeeStudents.UseColumnTextForButtonValue = true;
             // 
             // Show_Groups
             // 
@@ -66,7 +68,7 @@
             this.ClientSize = new System.Drawing.Size(808, 528);
             this.Controls.Add(this.dgvGroups);
             this.Name = "Show_Groups";
-            this.Text = "h\'01";
+            this.Text = "Show Groups";
             this.Load += new System.EventHandler(this.Show_Groups_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGroups)).EndInit();
             this.ResumeLayout(false);
