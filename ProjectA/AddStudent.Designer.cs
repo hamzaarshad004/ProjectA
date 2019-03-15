@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtContact = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -43,47 +45,51 @@
             this.lblDOB = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
             this.btnAddStudent = new System.Windows.Forms.Button();
-            this.lblViewAdded = new System.Windows.Forms.LinkLabel();
+            this.dgvStudents = new System.Windows.Forms.DataGridView();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.lblBack = new System.Windows.Forms.LinkLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(591, 151);
+            this.txtFirstName.Location = new System.Drawing.Point(227, 53);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(232, 22);
             this.txtFirstName.TabIndex = 0;
             // 
             // txtContact
             // 
-            this.txtContact.Location = new System.Drawing.Point(591, 281);
+            this.txtContact.Location = new System.Drawing.Point(227, 157);
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(232, 22);
             this.txtContact.TabIndex = 1;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(591, 346);
+            this.txtEmail.Location = new System.Drawing.Point(227, 209);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(232, 22);
             this.txtEmail.TabIndex = 2;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(591, 216);
+            this.txtLastName.Location = new System.Drawing.Point(227, 105);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(232, 22);
             this.txtLastName.TabIndex = 3;
             // 
             // txtRegNo
             // 
-            this.txtRegNo.Location = new System.Drawing.Point(591, 411);
+            this.txtRegNo.Location = new System.Drawing.Point(763, 53);
             this.txtRegNo.Name = "txtRegNo";
             this.txtRegNo.Size = new System.Drawing.Size(232, 22);
             this.txtRegNo.TabIndex = 4;
             // 
             // dtDOB
             // 
-            this.dtDOB.Location = new System.Drawing.Point(591, 476);
+            this.dtDOB.Location = new System.Drawing.Point(763, 118);
             this.dtDOB.Name = "dtDOB";
             this.dtDOB.Size = new System.Drawing.Size(232, 22);
             this.dtDOB.TabIndex = 5;
@@ -95,7 +101,7 @@
             this.cmbGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cmbGender.Location = new System.Drawing.Point(591, 541);
+            this.cmbGender.Location = new System.Drawing.Point(763, 183);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(232, 24);
             this.cmbGender.TabIndex = 6;
@@ -104,7 +110,7 @@
             // 
             this.lblFName.AutoSize = true;
             this.lblFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFName.Location = new System.Drawing.Point(187, 151);
+            this.lblFName.Location = new System.Drawing.Point(76, 51);
             this.lblFName.Name = "lblFName";
             this.lblFName.Size = new System.Drawing.Size(101, 24);
             this.lblFName.TabIndex = 7;
@@ -114,7 +120,7 @@
             // 
             this.lblLName.AutoSize = true;
             this.lblLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLName.Location = new System.Drawing.Point(187, 216);
+            this.lblLName.Location = new System.Drawing.Point(76, 103);
             this.lblLName.Name = "lblLName";
             this.lblLName.Size = new System.Drawing.Size(99, 24);
             this.lblLName.TabIndex = 8;
@@ -124,7 +130,7 @@
             // 
             this.lblContact.AutoSize = true;
             this.lblContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContact.Location = new System.Drawing.Point(187, 281);
+            this.lblContact.Location = new System.Drawing.Point(76, 155);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(106, 24);
             this.lblContact.TabIndex = 9;
@@ -134,7 +140,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(187, 346);
+            this.lblEmail.Location = new System.Drawing.Point(76, 207);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(57, 24);
             this.lblEmail.TabIndex = 10;
@@ -144,7 +150,7 @@
             // 
             this.lblRegNo.AutoSize = true;
             this.lblRegNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegNo.Location = new System.Drawing.Point(187, 411);
+            this.lblRegNo.Location = new System.Drawing.Point(549, 51);
             this.lblRegNo.Name = "lblRegNo";
             this.lblRegNo.Size = new System.Drawing.Size(138, 24);
             this.lblRegNo.TabIndex = 11;
@@ -154,7 +160,7 @@
             // 
             this.lblDOB.AutoSize = true;
             this.lblDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDOB.Location = new System.Drawing.Point(187, 476);
+            this.lblDOB.Location = new System.Drawing.Point(549, 116);
             this.lblDOB.Name = "lblDOB";
             this.lblDOB.Size = new System.Drawing.Size(114, 24);
             this.lblDOB.TabIndex = 12;
@@ -164,7 +170,7 @@
             // 
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(187, 541);
+            this.lblGender.Location = new System.Drawing.Point(549, 181);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(74, 24);
             this.lblGender.TabIndex = 13;
@@ -172,7 +178,7 @@
             // 
             // btnAddStudent
             // 
-            this.btnAddStudent.Location = new System.Drawing.Point(711, 611);
+            this.btnAddStudent.Location = new System.Drawing.Point(883, 251);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(112, 38);
             this.btnAddStudent.TabIndex = 14;
@@ -180,24 +186,61 @@
             this.btnAddStudent.UseVisualStyleBackColor = true;
             this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
-            // lblViewAdded
+            // dgvStudents
             // 
-            this.lblViewAdded.AutoSize = true;
-            this.lblViewAdded.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblViewAdded.Location = new System.Drawing.Point(867, 682);
-            this.lblViewAdded.Name = "lblViewAdded";
-            this.lblViewAdded.Size = new System.Drawing.Size(192, 24);
-            this.lblViewAdded.TabIndex = 15;
-            this.lblViewAdded.TabStop = true;
-            this.lblViewAdded.Text = "View Added Students";
-            this.lblViewAdded.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblViewAdded_LinkClicked);
+            this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Edit,
+            this.Delete});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStudents.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvStudents.Location = new System.Drawing.Point(120, 295);
+            this.dgvStudents.Name = "dgvStudents";
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dgvStudents.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvStudents.RowTemplate.Height = 24;
+            this.dgvStudents.Size = new System.Drawing.Size(948, 491);
+            this.dgvStudents.TabIndex = 15;
+            this.dgvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellContentClick);
+            // 
+            // Edit
+            // 
+            this.Edit.HeaderText = "Edit Data";
+            this.Edit.Name = "Edit";
+            this.Edit.Text = "Edit";
+            this.Edit.UseColumnTextForButtonValue = true;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete Student";
+            this.Delete.Name = "Delete";
+            this.Delete.Text = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
+            // 
+            // lblBack
+            // 
+            this.lblBack.AutoSize = true;
+            this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBack.Location = new System.Drawing.Point(1005, 794);
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Size = new System.Drawing.Size(166, 24);
+            this.lblBack.TabIndex = 16;
+            this.lblBack.TabStop = true;
+            this.lblBack.Text = "Back to Main Page";
             // 
             // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 725);
-            this.Controls.Add(this.lblViewAdded);
+            this.ClientSize = new System.Drawing.Size(1183, 827);
+            this.Controls.Add(this.lblBack);
+            this.Controls.Add(this.dgvStudents);
             this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.lblGender);
             this.Controls.Add(this.lblDOB);
@@ -216,6 +259,7 @@
             this.Name = "AddStudent";
             this.Text = "AddStudent";
             this.Load += new System.EventHandler(this.AddStudent_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,6 +282,9 @@
         private System.Windows.Forms.Label lblDOB;
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Button btnAddStudent;
-        private System.Windows.Forms.LinkLabel lblViewAdded;
+        private System.Windows.Forms.DataGridView dgvStudents;
+        private System.Windows.Forms.DataGridViewButtonColumn Edit;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.LinkLabel lblBack;
     }
 }

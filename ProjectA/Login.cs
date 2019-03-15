@@ -29,7 +29,37 @@ namespace ProjectA
             MakeGroups MG = new MakeGroups();
             //MG.Show();
             CreateGroup CG = new CreateGroup();
-            CG.Show();
+            //CG.Show();
+            AddEvaluation AE = new AddEvaluation();
+            AE.Show();
+        }
+
+        private void btnStudents_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddStudent AS = new AddStudent();
+            AS.Show();
+        }
+
+        private void btnAdvisors_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddAdvisor AA = new AddAdvisor();
+            AA.Show();
+        }
+
+        private void btnProjects_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddProject AP = new AddProject();
+            AP.Show();
+        }
+
+        private void btnEvaluations_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddEvaluation AE = new AddEvaluation();
+            AE.Show();
         }
     }
 }

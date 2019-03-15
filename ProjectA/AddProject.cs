@@ -69,6 +69,13 @@ namespace ProjectA
             dgvProjects.DataSource = s;
         }
 
+        private void lblBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Login L = new Login();
+            L.Show();
+        }
+
         private void dgvProjects_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 3)

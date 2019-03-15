@@ -101,7 +101,14 @@ namespace ProjectA
             else if (e.ColumnIndex == 1)
             {
                 int Delete_Id = Advisor.Advisors[e.RowIndex].Id1;
+                string Delete_Project_Advisor = "DELETE FROM ProjectAdvisor WHERE Id = '" + Delete_Id + "'";
                 string Delete = "DELETE FROM Advisor WHERE Id = '" + Delete_Id + "'";
+                if (con.State == ConnectionState.Open)
+                {
+                    SqlCommand cmd = new SqlCommand(Delete_Project_Advisor, con);
+                    cmd.ExecuteNonQuery();
+                }
+
                 if (con.State == ConnectionState.Open)
                 {
                     SqlCommand cmd = new SqlCommand(Delete, con);
@@ -110,6 +117,13 @@ namespace ProjectA
 
                 setGrid();
             }
+        }
+
+        private void lblBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Login L = new Login();
+            L.Show();
         }
 
         private void setGrid()

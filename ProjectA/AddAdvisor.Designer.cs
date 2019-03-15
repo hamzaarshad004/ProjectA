@@ -38,6 +38,7 @@
             this.dgvAdvisors = new System.Windows.Forms.DataGridView();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.lblBack = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdvisors)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,11 +139,24 @@
             this.Delete.Text = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
+            // lblBack
+            // 
+            this.lblBack.AutoSize = true;
+            this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBack.Location = new System.Drawing.Point(1087, 717);
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Size = new System.Drawing.Size(166, 24);
+            this.lblBack.TabIndex = 17;
+            this.lblBack.TabStop = true;
+            this.lblBack.Text = "Back to Main Page";
+            this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
+            // 
             // AddAdvisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1265, 750);
+            this.Controls.Add(this.lblBack);
             this.Controls.Add(this.dgvAdvisors);
             this.Controls.Add(this.btnAddAdvisor);
             this.Controls.Add(this.cmbDesignation);
@@ -172,5 +186,6 @@
         private System.Windows.Forms.DataGridView dgvAdvisors;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.LinkLabel lblBack;
     }
 }

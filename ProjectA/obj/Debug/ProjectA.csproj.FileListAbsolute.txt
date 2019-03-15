@@ -15,3 +15,4 @@ E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\P
 E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.CreateGroup.resources
 E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.Show_Groups.resources
 E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.ShowStudents.resources
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.AddEvaluation.resources

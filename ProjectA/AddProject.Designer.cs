@@ -38,6 +38,7 @@
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCompleteData = new System.Windows.Forms.TextBox();
+            this.lblBack = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProjects)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,11 +132,24 @@
             this.txtCompleteData.Size = new System.Drawing.Size(323, 174);
             this.txtCompleteData.TabIndex = 9;
             // 
+            // lblBack
+            // 
+            this.lblBack.AutoSize = true;
+            this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBack.Location = new System.Drawing.Point(1019, 726);
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Size = new System.Drawing.Size(166, 24);
+            this.lblBack.TabIndex = 17;
+            this.lblBack.TabStop = true;
+            this.lblBack.Text = "Back to Main Page";
+            this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
+            // 
             // AddProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1197, 759);
+            this.Controls.Add(this.lblBack);
             this.Controls.Add(this.txtCompleteData);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvProjects);
@@ -165,5 +179,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCompleteData;
+        private System.Windows.Forms.LinkLabel lblBack;
     }
 }

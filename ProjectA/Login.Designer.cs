@@ -28,83 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LoginBox = new System.Windows.Forms.GroupBox();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.lblUName = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.LoginBox.SuspendLayout();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnStudents = new System.Windows.Forms.Button();
+            this.btnAdvisors = new System.Windows.Forms.Button();
+            this.btnProjects = new System.Windows.Forms.Button();
+            this.btnEvaluations = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // LoginBox
+            // groupBox1
             // 
-            this.LoginBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.LoginBox.Controls.Add(this.btnLogin);
-            this.LoginBox.Controls.Add(this.textBox2);
-            this.LoginBox.Controls.Add(this.textBox1);
-            this.LoginBox.Controls.Add(this.lblPassword);
-            this.LoginBox.Controls.Add(this.lblUName);
-            this.LoginBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LoginBox.Location = new System.Drawing.Point(150, 119);
-            this.LoginBox.Name = "LoginBox";
-            this.LoginBox.Size = new System.Drawing.Size(506, 196);
-            this.LoginBox.TabIndex = 0;
-            this.LoginBox.TabStop = false;
-            this.LoginBox.Text = "Login";
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.groupBox1.Controls.Add(this.btnEvaluations);
+            this.groupBox1.Controls.Add(this.btnProjects);
+            this.groupBox1.Controls.Add(this.btnAdvisors);
+            this.groupBox1.Controls.Add(this.btnStudents);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(118, 111);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(557, 230);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "FYPs Management";
             // 
-            // btnLogin
+            // btnStudents
             // 
-            this.btnLogin.Location = new System.Drawing.Point(301, 148);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(94, 30);
-            this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnStudents.Location = new System.Drawing.Point(98, 45);
+            this.btnStudents.Name = "btnStudents";
+            this.btnStudents.Size = new System.Drawing.Size(172, 59);
+            this.btnStudents.TabIndex = 0;
+            this.btnStudents.Text = "Students";
+            this.btnStudents.UseVisualStyleBackColor = true;
+            this.btnStudents.Click += new System.EventHandler(this.btnStudents_Click);
             // 
-            // textBox2
+            // btnAdvisors
             // 
-            this.textBox2.Location = new System.Drawing.Point(228, 95);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 22);
-            this.textBox2.TabIndex = 3;
+            this.btnAdvisors.Location = new System.Drawing.Point(285, 45);
+            this.btnAdvisors.Name = "btnAdvisors";
+            this.btnAdvisors.Size = new System.Drawing.Size(172, 59);
+            this.btnAdvisors.TabIndex = 1;
+            this.btnAdvisors.Text = "Advisors";
+            this.btnAdvisors.UseVisualStyleBackColor = true;
+            this.btnAdvisors.Click += new System.EventHandler(this.btnAdvisors_Click);
             // 
-            // textBox1
+            // btnProjects
             // 
-            this.textBox1.Location = new System.Drawing.Point(228, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 22);
-            this.textBox1.TabIndex = 2;
+            this.btnProjects.Location = new System.Drawing.Point(98, 133);
+            this.btnProjects.Name = "btnProjects";
+            this.btnProjects.Size = new System.Drawing.Size(172, 59);
+            this.btnProjects.TabIndex = 2;
+            this.btnProjects.Text = "Projects";
+            this.btnProjects.UseVisualStyleBackColor = true;
+            this.btnProjects.Click += new System.EventHandler(this.btnProjects_Click);
             // 
-            // lblPassword
+            // btnEvaluations
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(54, 98);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(69, 17);
-            this.lblPassword.TabIndex = 1;
-            this.lblPassword.Text = "Password";
-            // 
-            // lblUName
-            // 
-            this.lblUName.AutoSize = true;
-            this.lblUName.Location = new System.Drawing.Point(54, 44);
-            this.lblUName.Name = "lblUName";
-            this.lblUName.Size = new System.Drawing.Size(79, 17);
-            this.lblUName.TabIndex = 0;
-            this.lblUName.Text = "User Name";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(23, 421);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(72, 17);
-            this.linkLabel1.TabIndex = 1;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.btnEvaluations.Location = new System.Drawing.Point(285, 133);
+            this.btnEvaluations.Name = "btnEvaluations";
+            this.btnEvaluations.Size = new System.Drawing.Size(172, 59);
+            this.btnEvaluations.TabIndex = 3;
+            this.btnEvaluations.Text = "Evaluations";
+            this.btnEvaluations.UseVisualStyleBackColor = true;
+            this.btnEvaluations.Click += new System.EventHandler(this.btnEvaluations_Click);
             // 
             // Login
             // 
@@ -112,26 +97,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.LoginBox);
+            this.Controls.Add(this.groupBox1);
             this.Name = "Login";
             this.Text = "Login Form";
-            this.LoginBox.ResumeLayout(false);
-            this.LoginBox.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox LoginBox;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label lblUName;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnEvaluations;
+        private System.Windows.Forms.Button btnProjects;
+        private System.Windows.Forms.Button btnAdvisors;
+        private System.Windows.Forms.Button btnStudents;
     }
 }
 

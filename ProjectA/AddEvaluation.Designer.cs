@@ -36,6 +36,9 @@
             this.txtWeightage = new System.Windows.Forms.TextBox();
             this.btnAddEvalutation = new System.Windows.Forms.Button();
             this.dgvEvaluations = new System.Windows.Forms.DataGridView();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.lblBack = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvaluations)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,17 +106,48 @@
             // dgvEvaluations
             // 
             this.dgvEvaluations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEvaluations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Edit,
+            this.Delete});
             this.dgvEvaluations.Location = new System.Drawing.Point(180, 325);
             this.dgvEvaluations.Name = "dgvEvaluations";
             this.dgvEvaluations.RowTemplate.Height = 24;
             this.dgvEvaluations.Size = new System.Drawing.Size(717, 307);
             this.dgvEvaluations.TabIndex = 7;
+            this.dgvEvaluations.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEvaluations_CellContentClick);
+            // 
+            // Edit
+            // 
+            this.Edit.HeaderText = "Edit Data";
+            this.Edit.Name = "Edit";
+            this.Edit.Text = "Edit";
+            this.Edit.UseColumnTextForButtonValue = true;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.Text = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
+            // 
+            // lblBack
+            // 
+            this.lblBack.AutoSize = true;
+            this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBack.Location = new System.Drawing.Point(901, 659);
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Size = new System.Drawing.Size(166, 24);
+            this.lblBack.TabIndex = 17;
+            this.lblBack.TabStop = true;
+            this.lblBack.Text = "Back to Main Page";
+            this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
             // 
             // AddEvaluation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1079, 692);
+            this.Controls.Add(this.lblBack);
             this.Controls.Add(this.dgvEvaluations);
             this.Controls.Add(this.btnAddEvalutation);
             this.Controls.Add(this.txtWeightage);
@@ -140,5 +174,8 @@
         private System.Windows.Forms.TextBox txtWeightage;
         private System.Windows.Forms.Button btnAddEvalutation;
         private System.Windows.Forms.DataGridView dgvEvaluations;
+        private System.Windows.Forms.DataGridViewButtonColumn Edit;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.LinkLabel lblBack;
     }
 }
