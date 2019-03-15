@@ -23,7 +23,7 @@ namespace ProjectA
             AddStudent AS = new AddStudent();
             AS.Show();
             AddAdvisor AD = new AddAdvisor();
-            //AD.Show();
+            AD.Show();
             AddProject AP = new AddProject();
             AP.Show();
             MakeGroups MG = new MakeGroups();

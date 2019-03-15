@@ -35,11 +35,7 @@ namespace ProjectA
                     cmd.ExecuteNonQuery();
                 }
 
-                BindingSource s = new BindingSource();
-                Project.getProjects();
-                showprojects = Project.projects;
-                s.DataSource = showprojects;
-                dgvProjects.DataSource = s;
+                setGrid();
 
             }
             else if (Mode == 1)
@@ -51,23 +47,26 @@ namespace ProjectA
                     cmd.ExecuteNonQuery();
                 }
 
-                BindingSource s = new BindingSource();
-                Project.getProjects();
-                showprojects = Project.projects;
-                s.DataSource = showprojects;
-                dgvProjects.DataSource = s;
+                Mode = 0;
+
+                setGrid();
             }
         }
 
         private void AddProject_Load(object sender, EventArgs e)
+        {
+            setGrid();
+
+            txtCompleteData.Text = null;
+        }
+
+        public void setGrid()
         {
             BindingSource s = new BindingSource();
             Project.getProjects();
             showprojects = Project.projects;
             s.DataSource = showprojects;
             dgvProjects.DataSource = s;
-
-            txtCompleteData.Text = null;
         }
 
         private void dgvProjects_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -99,11 +98,7 @@ namespace ProjectA
                     SqlCommand cmd = new SqlCommand(Delete, con);
                     cmd.ExecuteNonQuery();
                 }
-                BindingSource s = new BindingSource();
-                Project.getProjects();
-                showprojects = Project.projects;
-                s.DataSource = showprojects;
-                dgvProjects.DataSource = s;
+                setGrid();
             }
         }
     }
