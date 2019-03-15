@@ -26,31 +26,61 @@ namespace ProjectA
         {
             SqlConnection con = new SqlConnection(conStr);
             con.Open();
-            if (Mode == 0)
+            if (!string.IsNullOrWhiteSpace(txtTitle.Text) && !string.IsNullOrWhiteSpace(txtDescription.Text))
             {
-                if (con.State == ConnectionState.Open)
+                if (Mode == 0)
                 {
-                    string Insert = "INSERT INTO Project(Description, Title) VALUES('" + Convert.ToString(txtDescription.Text) + "', '" + Convert.ToString(txtTitle.Text) + "')";
-                    SqlCommand cmd = new SqlCommand(Insert, con);
-                    cmd.ExecuteNonQuery();
+                    try
+                    {
+                        if (con.State == ConnectionState.Open)
+                        {
+                            string Insert = "INSERT INTO Project(Description, Title) VALUES('" + Convert.ToString(txtDescription.Text) + "', '" + Convert.ToString(txtTitle.Text) + "')";
+                            SqlCommand cmd = new SqlCommand(Insert, con);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        setGrid();
+                        setNull();
+
+                        MessageBox.Show("Data Succesfully Inserted");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error:" + ex);
+                    }
+                   
+
                 }
+                else if (Mode == 1)
+                {
+                    try
+                    {
+                        if (con.State == ConnectionState.Open)
+                        {
+                            string Update = "UPDATE Project SET Title = '" + Convert.ToString(txtTitle.Text) + "', Description = '" + Convert.ToString(txtDescription.Text) + "' WHERE Id = '" + Id + "'";
+                            SqlCommand cmd = new SqlCommand(Update, con);
+                            cmd.ExecuteNonQuery();
+                        }
 
-                setGrid();
+                        Mode = 0;
 
+                        setGrid();
+                        setNull();
+
+                        MessageBox.Show("Data Succesfully Updated");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error:" + ex);
+                    }
+                    
+                }
             }
-            else if (Mode == 1)
+            else
             {
-                if (con.State == ConnectionState.Open)
-                {
-                    string Update = "UPDATE Project SET Title = '" + Convert.ToString(txtTitle.Text) + "', Description = '" + Convert.ToString(txtDescription.Text) + "' WHERE Id = '" + Id + "'";
-                    SqlCommand cmd = new SqlCommand(Update, con);
-                    cmd.ExecuteNonQuery();
-                }
-
-                Mode = 0;
-
-                setGrid();
+                MessageBox.Show("Enter some Data");
             }
+            
         }
 
         private void AddProject_Load(object sender, EventArgs e)
@@ -76,6 +106,12 @@ namespace ProjectA
             L.Show();
         }
 
+        private void setNull()
+        {
+            txtTitle.Text = null;
+            txtDescription.Text = null;
+        }
+
         private void dgvProjects_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 3)
@@ -96,16 +132,24 @@ namespace ProjectA
             }
             else if (e.ColumnIndex == 1)
             {
-                int Delete_Id = Project.projects[e.RowIndex].Id1;
-                string Delete = "DELETE FROM Project WHERE Id = '" + Delete_Id + "'";
-                SqlConnection con = new SqlConnection(conStr);
-                con.Open();
-                if (con.State == ConnectionState.Open)
+                try
                 {
-                    SqlCommand cmd = new SqlCommand(Delete, con);
-                    cmd.ExecuteNonQuery();
+                    int Delete_Id = Project.projects[e.RowIndex].Id1;
+                    string Delete = "DELETE FROM Project WHERE Id = '" + Delete_Id + "'";
+                    SqlConnection con = new SqlConnection(conStr);
+                    con.Open();
+                    if (con.State == ConnectionState.Open)
+                    {
+                        SqlCommand cmd = new SqlCommand(Delete, con);
+                        cmd.ExecuteNonQuery();
+                    }
+                    setGrid();
                 }
-                setGrid();
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error:" + ex);
+                }
+                
             }
         }
     }

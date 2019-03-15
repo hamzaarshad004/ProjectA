@@ -62,7 +62,7 @@ namespace ProjectA
                         cmd.ExecuteNonQuery();
 
                     }
-
+                    setGrid();
                     MessageBox.Show("Succesfully Deleted");
                 }
                 catch (Exception ex)
@@ -71,7 +71,7 @@ namespace ProjectA
                 }
                 
 
-                setGrid();
+               
 
             }
         }
@@ -120,6 +120,7 @@ namespace ProjectA
                             sqlCommand.ExecuteNonQuery();
 
                             setGrid();
+                            setNull();
                         }
 
                         MessageBox.Show("Data Succesfully Inserted");
@@ -152,19 +153,33 @@ namespace ProjectA
                             sqlCommand.ExecuteNonQuery();
                         }
 
+                        setGrid();
+                        setNull();
+                        AddStudent.Mode = 0;
                         MessageBox.Show("Succesfully Updated");
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Error:" + ex);
                     }
-                    
-                    setGrid();
-                    AddStudent.Mode = 0;
+                   
                 }
             }
-            
-                
+            else
+            {
+                MessageBox.Show("Enter some Data");
+            }
+
+
+        }
+
+        private void setNull()
+        {
+            txtFirstName.Text = null;
+            txtLastName.Text = null;
+            txtEmail.Text = null;
+            txtContact.Text = null;
+            txtRegNo.Text = null;
         }
 
         /*private void lblViewAdded_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

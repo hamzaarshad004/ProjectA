@@ -80,6 +80,13 @@ namespace ProjectA
             L.Show();
         }
 
+        private void setNull()
+        {
+            txtMarks.Text = null;
+            txtName.Text = null;
+            txtWeightage.Text = null;
+        }
+
         private void btnAddEvalutation_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtName.Text) && !string.IsNullOrWhiteSpace(txtMarks.Text) && !string.IsNullOrWhiteSpace(txtWeightage.Text))
@@ -113,6 +120,7 @@ namespace ProjectA
 
                         Mode = 0;
                         setGrid();
+                        setNull();
 
                         MessageBox.Show("Data Inserted Succesfully");
                     }
@@ -122,6 +130,10 @@ namespace ProjectA
                     }
                     
                 }
+            }
+            else
+            {
+                MessageBox.Show("Enter some Data");
             }
             
         }
